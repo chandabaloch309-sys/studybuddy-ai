@@ -46,10 +46,10 @@ export default function RootLayout({
                 Home
               </Link>
               <Link
-                href="/logo"
+                href="/deshboard"
                 className="block px-4 py-2 rounded-lg hover:bg-indigo-50 text-gray-700 hover:text-indigo-700 transition"
               >
-                
+                deshboard
               </Link>
             </nav>
           </aside>
