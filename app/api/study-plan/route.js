@@ -6,6 +6,7 @@ export async function POST(req) {
     console.log("API route started");
 
     console.log("API Key exists:", !!process.env.GEMINI_API_KEY);
+    console.log("API Key starts with:", process.env.GEMINI_API_KEY?.substring(0, 10));
 
     const { title, description, dueDate } = await req.json();
 
