@@ -1,64 +1,44 @@
 # StudyBuddy AI
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Firebase](https://img.shields.io/badge/Firebase-Auth%20%2B%20Firestore-FFCA28?style=flat-square&logo=firebase)](https://firebase.google.com/)
-[![Google Gemini](https://img.shields.io/badge/Google_Gemini-AI-4285F4?style=flat-square&logo=google)](https://ai.google.dev/)
-[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
+**Your smart AI-powered study planner for university students.**
 
-**AI-powered study planner for university students**
+Live Demo: [https://studybuddy-ai-alpha-roan.vercel.app](https://studybuddy-ai-alpha-roan.vercel.app)
 
-Manage assignments, track academic progress, and generate personalized study plans using Google Gemini AI.
+---
 
-🔗 **Live Demo:** [https://studybuddy-ai-alpha-roan.vercel.app](https://studybuddy-ai-alpha-roan.vercel.app)
+## The Problem
+
+University students struggle to manage multiple assignments, deadlines, and study schedules. Most tools are just simple to-do lists that don’t help students plan how to study effectively.
+
+**StudyBuddy AI** solves this problem by helping students organize assignments, track progress, and generate personalized AI study plans — all in one place.
 
 ---
 
 ## Features
 
-- Secure authentication with Firebase (Login & Register)
-- Personal dashboard with live statistics
-- Full CRUD for assignments (Create, Read, Update, Delete)
-- Assignment status management (Pending / Completed)
-- Priority levels (High / Medium / Low)
-- AI Study Assistant powered by Google Gemini
-- AI-generated personalized study plans
-- Dark mode support
-- Fully responsive design
+- User Login & Register (Firebase Authentication)
+- Add, Edit, Delete Assignments
+- Set Due Date, Priority, and Category
+- Mark assignments as Completed
+- Real-time Stats (Total, Pending, Completed, High Priority)
+- AI Study Plan Generator for each assignment
+- View and Regenerate AI Study Plans
+- Calendar view of due dates
+- Pomodoro Focus Timer (15 / 25 / 45 minutes)
+- Dark Mode
+- Responsive Design
 
 ---
 
-## Tech Stack
+## AI Feature
 
-| Layer                | Technology                      |
-|----------------------|---------------------------------|
-| Frontend             | Next.js, React, Tailwind CSS    |
-| Authentication       | Firebase Authentication         |
-| Database             | Cloud Firestore                 |
-| Artificial Intelligence | Google Gemini API            |
-| Deployment           | Vercel                          |
-| Version Control      | GitHub                          |
+When you click **“Regenerate Plan”** on any assignment, the AI creates a detailed multi-day study plan based on the assignment title and topic.
 
----
+**Example:**  
+For the assignment “calculus topic limits”, the AI generated a complete 4-day study plan to master Limits in Calculus.
 
-## Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm
-- Firebase project
-- Google Gemini API key
-
-### Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd studybuddy-ai
-
-# Install dependencies
-npm install
-
-# Create environment file
-cp .env.example .env.local   # or create .env.local manually
+**System Prompt used:**
+```text
+You are an expert study coach. 
+Create a clear, practical, day-by-day study plan for the given assignment topic. 
+Break the topic into logical steps, include practice recommendations, and make it realistic for a university student.
