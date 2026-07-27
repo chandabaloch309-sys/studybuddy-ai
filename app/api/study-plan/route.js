@@ -11,10 +11,9 @@ export async function POST(req) {
       return NextResponse.json({ error: "Title is required" }, { status: 400 });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-3.6-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash",});
 
-    const prompt = `
-You are an expert study planner for university students.
+    const prompt = `You are an expert study planner for university students.
 
 Create a clear, practical, and detailed study plan for this assignment:
 
