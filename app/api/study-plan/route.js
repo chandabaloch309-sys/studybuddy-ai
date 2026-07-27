@@ -11,7 +11,7 @@ export async function POST(req) {
       return NextResponse.json({ error: "Title is required" }, { status: 400 });
     }
 
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash",});
+  const model = genAI.getGenerativeModel({model: "gemini-2.5-pro",});
 
     const prompt = `You are an expert study planner for university students.
 
